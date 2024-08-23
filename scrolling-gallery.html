@@ -14,10 +14,9 @@
         }
         #container {
             position: relative;
-            height: 150px; /* Height of the container */
+            height: 150px; /* Adjust height as needed */
             overflow: hidden;
             width: 100%;
-            background-color: black; /* Background color to match image edges */
         }
         #permas {
             display: flex;
@@ -25,10 +24,10 @@
             animation: scroll 30s linear infinite;
         }
         #permas img {
-            height: 100%; /* Scale images to fit the container height */
+            height: 100%; /* Scale images to fit container height */
+            width: auto; /* Maintain aspect ratio */
             object-fit: contain; /* Ensure the entire image is visible */
             flex-shrink: 0; /* Prevent images from shrinking */
-            width: auto; /* Maintain aspect ratio */
         }
         @keyframes scroll {
             from {
@@ -66,4 +65,5 @@
     </div>
 </body>
 </html>
+
 
