@@ -14,20 +14,20 @@
         }
         #container {
             position: relative;
-            height: 100%; /* Adjust height as needed */
+            height: 100%; /* Set height to 100% */
             overflow: hidden;
             width: 100%;
         }
         #permas {
             display: flex;
             white-space: nowrap;
-            animation: scroll 5s linear infinite;
+            animation: scroll 5s linear infinite; /* Adjusted duration to 5 seconds */
         }
         #permas img {
             height: 100%; /* Scale images to fit container height */
             width: auto; /* Maintain aspect ratio */
             object-fit: contain; /* Ensure the entire image is visible */
-            flex-shrink: 1; /* Prevent images from shrinking */
+            flex-shrink: 0; /* Prevent images from shrinking */
         }
         @keyframes scroll {
             from {
@@ -65,5 +65,3 @@
     </div>
 </body>
 </html>
-
-
