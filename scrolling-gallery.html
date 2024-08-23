@@ -21,12 +21,12 @@
         #permas {
             display: flex;
             white-space: nowrap;
-            animation: scroll 5s linear infinite; /* Adjusted duration to 5 seconds */
+            width: 200%; /* Make the container twice as wide to handle continuous scrolling */
+            animation: scroll 10s linear infinite; /* Adjust duration to 10 seconds */
         }
         #permas img {
             height: 100%; /* Scale images to fit container height */
             width: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the entire image is visible */
             flex-shrink: 0; /* Prevent images from shrinking */
         }
         @keyframes scroll {
@@ -59,8 +59,6 @@
             <img src="https://static.wixstatic.com/media/1b2b57_189aae7cd1f54867861677adbf760ac1~mv2.png" alt="Image">
             <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image">
             <img src="https://static.wixstatic.com/media/1b2b57_253244d7d399450db75aef4ca94559bb~mv2.png" alt="Image">
-            <img src="https://static.wixstatic.com/media/1b2b57_4b025473718149fdbcff5c63f0a4158e~mv2.png" alt="Image">
-            <img src="https://static.wixstatic.com/media/1b2b57_71158a28ed0c457bb9d271487c8412f6~mv2.png" alt="Image">
         </div>
     </div>
 </body>
