@@ -4,110 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spooky Halloween Scroller</title>
-    <style>
-        .scroller {
-            max-width: 100%;
-            margin: 0 auto;
-            overflow: hidden;
-            background-color: transparent; /* Set background to transparent */
-        }
-
-        .scroller__inner {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 1rem;
-        }
-
-        .scroller[data-animated="true"] {
-            overflow: hidden;
-            -webkit-mask: linear-gradient(
-                90deg,
-                transparent,
-                white 20%,
-                white 80%,
-                transparent
-            );
-            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        }
-
-        .scroller[data-animated="true"] .scroller__inner {
-            width: max-content;
-            animation: scroll var(--_animation-duration, 15s)
-                var(--_animation-direction, forwards) linear infinite;
-        }
-
-        .scroller[data-direction="right"] {
-            --_animation-direction: reverse;
-        }
-
-        .scroller[data-direction="left"] {
-            --_animation-direction: forwards;
-        }
-
-        .scroller[data-speed="fast"] {
-            --_animation-duration: 10s; /* Faster speed */
-        }
-
-        .scroller[data-speed="slow"] {
-            --_animation-duration: 20s; /* Slower speed */
-        }
-
-        @keyframes scroll {
-            to {
-                transform: translateX(calc(-50% - 1rem));
-            }
-        }
-
-        /* General styles */
-        :root {
-            --clr-neutral-100: hsl(0, 0%, 100%);
-            --clr-primary-400: hsl(215, 25%, 27%);
-            --clr-primary-800: hsl(217, 33%, 17%);
-            --clr-orange: hsl(30, 100%, 50%);
-        }
-
-        html {
-            color-scheme: light;
-        }
-
-        body {
-            display: grid;
-            min-block-size: 100vh;
-            place-content: center;
-            font-family: system-ui;
-            font-size: 1.125rem;
-            background-color: transparent; /* Set background to transparent */
-            color: var(--clr-orange);
-            text-align: center;
-            margin: 0;
-        }
-
-        .scroller img {
-            height: 150px; /* Make images slightly larger */
-            width: auto; /* Maintain aspect ratio */
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Updated path -->
 </head>
 <body>
     <div class="scroller" data-direction="left" data-speed="fast" data-animated="true">
         <div class="scroller__inner">
-            <img src="https://static.wixstatic.com/media/1b2b57_4b025473718149fdbcff5c63f0a4158e~mv2.png" alt="Image 1" />
-            <img src="https://static.wixstatic.com/media/1b2b57_71158a28ed0c457bb9d271487c8412f6~mv2.png" alt="Image 2" />
-            <img src="https://static.wixstatic.com/media/1b2b57_47b980c7571c41c59cbb6ce3502224d1~mv2.png" alt="Image 3" />
-            <img src="https://static.wixstatic.com/media/1b2b57_a112ff56bb024c0a8eba76b2eeda621e~mv2.png" alt="Image 4" />
-            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 5" />
-            <img src="https://static.wixstatic.com/media/1b2b57_189aae7cd1f54867861677adbf760ac1~mv2.png" alt="Image 6" />
-            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 7" />
-            <img src="https://static.wixstatic.com/media/1b2b57_253244d7d399450db75aef4ca94559bb~mv2.png" alt="Image 8" />
-            <!-- Repeat images to ensure seamless scrolling -->
-            <img src="https://static.wixstatic.com/media/1b2b57_4b025473718149fdbcff5c63f0a4158e~mv2.png" alt="Image 1" />
-            <img src="https://static.wixstatic.com/media/1b2b57_71158a28ed0c457bb9d271487c8412f6~mv2.png" alt="Image 2" />
-            <img src="https://static.wixstatic.com/media/1b2b57_47b980c7571c41c59cbb6ce3502224d1~mv2.png" alt="Image 3" />
-            <img src="https://static.wixstatic.com/media/1b2b57_a112ff56bb024c0a8eba76b2eeda621e~mv2.png" alt="Image 4" />
-            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 5" />
-            <img src="https://static.wixstatic.com/media/1b2b57_189aae7cd1f54867861677adbf760ac1~mv2.png" alt="Image 6" />
-            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 7" />
-            <img src="https://static.wixstatic.com/media/1b2b57_253244d7d399450db75aef4ca94559bb~mv2.png" alt="Image 8" />
+            <img src="https://static.wixstatic.com/media/1b2b57_4b025473718149fdbcff5c63f0a4158e~mv2.png" alt="Image 1" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_71158a28ed0c457bb9d271487c8412f6~mv2.png" alt="Image 2" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_47b980c7571c41c59cbb6ce3502224d1~mv2.png" alt="Image 3" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_a112ff56bb024c0a8eba76b2eeda621e~mv2.png" alt="Image 4" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 5" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_189aae7cd1f54867861677adbf760ac1~mv2.png" alt="Image 6" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 7" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_253244d7d399450db75aef4ca94559bb~mv2.png" alt="Image 8" loading="lazy" />
+            <!-- Repeat images for seamless scrolling -->
+            <img src="https://static.wixstatic.com/media/1b2b57_4b025473718149fdbcff5c63f0a4158e~mv2.png" alt="Image 1" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_71158a28ed0c457bb9d271487c8412f6~mv2.png" alt="Image 2" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_47b980c7571c41c59cbb6ce3502224d1~mv2.png" alt="Image 3" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_a112ff56bb024c0a8eba76b2eeda621e~mv2.png" alt="Image 4" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 5" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_189aae7cd1f54867861677adbf760ac1~mv2.png" alt="Image 6" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_207afc16574442a8b3bee3a0501e650f~mv2.png" alt="Image 7" loading="lazy" />
+            <img src="https://static.wixstatic.com/media/1b2b57_253244d7d399450db75aef4ca94559bb~mv2.png" alt="Image 8" loading="lazy" />
         </div>
     </div>
 </body>
