@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
+    will-change: transform; /* Hint to the browser about the upcoming changes */
 }
 
 .scroller[data-animated="true"] {
